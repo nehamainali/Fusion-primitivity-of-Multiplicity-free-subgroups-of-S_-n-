@@ -1,0 +1,404 @@
+%% GAP output checkign fusion-primitivity for sporadic examples
+ and the Folded Johnson scheme %%
+
+
+
+gap> for d in [1..25] do
+> n:=NrPrimitiveGroups(d);
+> for i in [1..n] do
+> Print(d," ",i," ",PrimitiveGroup(d,i),"\n");
+> od; od;
+2 1 S(2)
+3 1 A(3)
+3 2 S(3)
+4 1 A(4)
+4 2 S(4)
+5 1 C(5)
+5 2 D(2*5)
+5 3 AGL(1, 5)
+5 4 A(5)
+5 5 S(5)
+6 1 PSL(2,5)
+6 2 PGL(2,5)
+6 3 A(6)
+6 4 S(6)
+7 1 C(7)
+7 2 D(2*7)
+7 3 7:3
+7 4 AGL(1, 7)
+7 5 L(3, 2)
+7 6 A(7)
+7 7 S(7)
+8 1 AGL(1, 8)
+8 2 AGammaL(1, 8)
+8 3 ASL(3, 2)
+8 4 PSL(2, 7)
+8 5 PGL(2, 7)
+8 6 A(8)
+8 7 S(8)
+9 1 3^2:4
+9 2 3^2:D(2*4)
+9 3 3^2:Q(8)=M(9)
+9 4 3^2:8=AGL(1,9)
+9 5 AGammaL(1, 9)
+9 6 3^2:(2'A(4))
+9 7 AGL(2, 3)
+9 8 PSL(2, 8)
+9 9 PGammaL(2, 8)
+9 10 A(9)
+9 11 S(9)
+10 1 A(5)
+10 2 S(5)
+10 3 PSL(2, 9)
+10 4 PGL(2, 9)
+10 5 PSigmaL(2, 9)
+10 6 M(10)
+10 7 PGammaL(2, 9)
+10 8 A(10)
+10 9 S(10)
+11 1 C(11)
+11 2 D(2*11)
+11 3 11:5
+11 4 AGL(1, 11)
+11 5 L(2, 11)
+11 6 M(11)
+11 7 A(11)
+11 8 S(11)
+12 1 M(11)
+12 2 M(12)
+12 3 PSL(2, 11)
+12 4 PGL(2, 11)
+12 5 A(12)
+12 6 S(12)
+13 1 C(13)
+13 2 D(2*13)
+13 3 13:3
+13 4 13:4
+13 5 13:6
+13 6 AGL(1, 13)
+13 7 L(3, 3)
+13 8 A(13)
+13 9 S(13)
+14 1 PSL(2,13)
+14 2 PGL(2,13)
+14 3 A(14)
+14 4 S(14)
+15 1 A(7)
+15 2 A(6)
+15 3 S(6)
+15 4 PSL(4, 2)
+15 5 A(15)
+15 6 S(15)
+16 1 2^4:5
+16 2 2^4:D(2*5)
+16 3 AGL(1, 16)
+16 4 (A(4) x A(4)):2
+16 5 (2^4:5).4
+16 6 AGL(1, 16):2
+16 7 2^4.S(3) x S(3)
+16 8 2^4.3^2:4
+16 9 AGammaL(1, 16)
+16 10 (S(4) x S(4)):2
+16 11 2^4.PSL(4, 2)
+16 12 AGammaL(2, 4)
+16 13 ASL(2, 4):2
+16 14 AGL(2, 4)
+16 15 ASL(2, 4)
+16 16 2^4.S(6)
+16 17 2^4.A(6)
+16 18 2^4:S(5)
+16 19 2^4:A(5)
+16 20 2^4.A(7)
+16 21 A(16)
+16 22 S(16)
+17 1 C(17)
+17 2 D(2*17)
+17 3 17:4
+17 4 17:8
+17 5 AGL(1, 17)
+17 6 L(2, 2^4)
+17 7 L(2, 2^4):2
+17 8 L(2, 2^4):4 = PGammaL(2, 2^4)
+17 9 A(17)
+17 10 S(17)
+18 1 PSL(2,17)
+18 2 PGL(2,17)
+18 3 A(18)
+18 4 S(18)
+19 1 C(19)
+19 2 D(2*19)
+19 3 19:3
+19 4 19:6
+19 5 19:9
+19 6 AGL(1, 19)
+19 7 A(19)
+19 8 S(19)
+20 1 PSL(2,19)
+20 2 PGL(2,19)
+20 3 A(20)
+20 4 S(20)
+21 1 PGL(2, 7)
+21 2 A(7)
+21 3 S(7)
+21 4 PSL(3, 4)=M(21)
+21 5 PSigmaL(3, 4)
+21 6 PGL(3, 4)
+21 7 PGammaL(3, 4)
+21 8 A(21)
+21 9 S(21)
+22 1 M(22)
+22 2 M(22):2
+22 3 A(22)
+22 4 S(22)
+23 1 C(23)
+23 2 D(2*23)
+23 3 23:11
+23 4 AGL(1, 23)
+23 5 M(23)
+23 6 A(23)
+23 7 S(23)
+24 1 M(24)
+24 2 PSL(2, 23)
+24 3 PGL(2, 23)
+24 4 A(24)
+24 5 S(24)
+25 1 5^2:3
+25 2 5^2:S(3)
+25 3 5^2:6
+25 4 5^2:Q(8)
+25 5 5^2:D(2*4)
+25 6 5^2:8
+25 7 5^2:D(2*6)
+25 8 5^2:Q(12)
+25 9 5^2:12
+25 10 5^2:8:2
+25 11 5^2:D(2*4):2
+25 12 5^2:3:8
+25 13 5^2:4 x D(2*3)
+25 14 AGL(1, 25)
+25 15 5^2:(Q(8):3)
+25 16 5^2:O+(2, 5)
+25 17 AGammaL(1, 25)
+25 18 5^2:((Q(8):3)'2)
+25 19 5^2:((Q(8):3)'4)
+25 20 ASL(2, 5)
+25 21 ASL(2, 5):2
+25 22 AGL(2, 5)
+25 23 (A(5) x A(5)):2
+25 24 (A(5) x A(5)):2^2
+25 25 (A(5) x A(5)):4
+25 26 (S(5) x S(5)):2
+25 27 A(25)
+25 28 S(25)
+
+############AGL(1,5)#################
+gap> G:=SymmetricGroup(5);
+Sym( [ 1 .. 5 ] )
+gap> H:=PrimitiveGroup(5,3);
+AGL(1, 5)
+gap> b:=LeftRegularMatricesOfSchurianScheme(G,H);;
+gap> for i1 in [2..Length(b)] do
+> if Dimension(Algebra(Rationals,[b[1],b[i1]]))=Length(b) then
+> P:=Eigenvectors(Rationals,b[i1]);
+> if Length(P)=Length(b) then
+> F:=TestFusions(TransposedMat(P));
+> Print(i1," ",Length(F),"\n");
+> break; fi; fi; od;
+2 1
+gap> G:=SymmetricGroup(6);
+Sym( [ 1 .. 6 ] )
+gap> H:=PrimitiveGroup(6,2);
+PGL(2,5)
+#############################3333
+2 1
+##############################################
+gap> H:=PSL(2,5);
+Group([ (3,5)(4,6), (1,2,5)(3,4,6) ])
+2 3
+########################################33
+gap> G:=SymmetricGroup(7);
+Sym( [ 1 .. 7 ] )
+gap> H:=PrimitiveGroup(7,4);
+AGL(1, 7)
+2 3
+############################################
+gap> H:=PSL(3,2);
+Group([ (4,6)(5,7), (1,2,4)(3,6,5) ])
+2 3
+############################################3
+gap> G:=SymmetricGroup(8);
+Sym( [ 1 .. 8 ] )
+gap> H:=PrimitiveGroup(8,2);
+AGammaL(1, 8)
+7 3
+##################################
+gap> H:=PrimitiveGroup(8,5);
+PGL(2, 7)
+2 3
+#######################################
+gap> G:=SymmetricGroup(9);
+Sym( [ 1 .. 9 ] )
+gap> H:=PrimitiveGroup(9,7);
+AGL(2, 3)
+3 2
+####################################3
+gap> H:=PrimitiveGroup(9,9);
+PGammaL(2, 8)
+2 3
+#######################################3
+gap> G:=SymmetricGroup(10);
+Sym( [ 1 .. 10 ] )
+gap> H:=PrimitiveGroup(10,7);
+PGammaL(2, 9)
+#########################################
+gap> G:=SymmetricGroup(11);
+Sym( [ 1 .. 11 ] )
+gap> H:=PrimitiveGroup(11,6);
+M(11)
+6 3
+######################################
+
+gap> G:=SymmetricGroup(12);
+Sym( [ 1 .. 12 ] )
+gap> H:=PrimitiveGroup(12,2);
+M(12)
+6 3
+#############################################################
+Checking Fusions for the sporadic subgroups SD4, RD4, SD5
+#############################################################   
+ 
+gap> SD4:=Group([ (1,2,3,4)(5,6)(9,10), (5,6,7,8)(1,2)(9,10), (9,10,11,12)(1,2)(5,6), (1,2)(5,6)(9,10),
+> (1,5)(2,6)(3,7)(4,8), (1,5,9)(2,6,10)(3,7,11)(4,8,12)]);
+Group([ (1,2,3,4)(5,6)(9,10), (1,2)(5,6,7,8)(9,10), (1,2)(5,6)(9,10,11,12), (1,2)(5,6)(9,10), (1,5)(2,6)(3,7)
+(4,8), (1,5,9)(2,6,10)(3,7,11)(4,8,12) ])
+gap> M:=ConjugacyClassesMaximalSubgroups(SymmetricGroup(12));;
+gap> for i in [1..Length(M)] do if SD4 in M[i] then Print(i, "\n"); fi; od;
+gap> RD4:=Group( [ ( 1, 5)( 2, 6)( 3, 8)( 4, 7)(11,12), (10,11,12),( 1, 9, 5)( 2,10, 6)( 3,11, 7)( 4,12, 8), ( 6, 8, 7)(10,11,12),( 2, 4, 3)( 6, 8, 7)(10,12,11), ( 1, 4)( 2, 3)( 5, 8)( 6, 7),( 1, 2)( 3, 4)( 5, 8)( 6, 7), ( 5, 8)( 6, 7)( 9,12)(10,11), ( 5, 6)( 7, 8), ( 9,11)(10,12), ( 9,12)(10,11) ] );
+<permutation group with 11 generators>
+gap> for i in [1..Length(M)] do if RD4 in M[i] then Print(i, "\n"); fi; od;
+gap> M:=ConjugacyClassesMaximalSubgroups(SymmetricGroup(15));;
+gap> SD5:=Group([ (1,2,3,4,5), (1,2)(6,7)(11,12), (6,7,8,9,10), (3,4)(6,7)(11,12), (11,12,13,14,15), (1,2)(9,10)(11,12), (1,6)(2,7)(3,8)(4,9)(5,10), (1,6,11)(2,7,12)(3,8,13)(4,9,14)(5,10,15) ]);
+<permutation group with 8 generators>
+gap> for i in [1..Length(M)] do if SD5 in M[i] then Print(i, "\n"); fi; od;
+
+###################################################################
+Checking fusions for folded Johnson scheme S_{\ell}\wrS_{2}
+#############################################################
+
+gap> for k in [3..10] do L:=FoldedJohnsonSchemeIA(k); b:=IAtoTA(L); FusionsOfTA(b); Print (k,"\n", FusionsOfTA(b));od; 
+[ [ 1 ], [ 2 ] ]   [ [ 1, 2 ] ]   3
+[ [ [ 1 ], [ 2 ] ], [ [ 1, 2 ] ] ][ [ 1 ], [ 2 ], [ 3 ] ]   [ [ 1 ], [ 2, 3 ] ]   [ [ 1, 2, 3 ] ]     4
+[ [ [ 1 ], [ 2 ], [ 3 ] ], [ [ 1 ], [ 2, 3 ] ], [ [ 1, 2, 3 ] ] ]   5
+[ [ [ 1 ], [ 2 ], [ 3 ] ], [ [ 1 ], [ 2, 3 ] ], [ [ 1, 2, 3 ] ] ] 6
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], [ [ 1 ], [ 2, 3, 4 ] ], [ [ 1, 2, 3, 4 ] ] ] 7
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], [ [ 1 ], [ 2, 3, 4 ] ], [ [ 1, 2, 3, 4 ] ] ] 8
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ] ], [ [ 1 ], [ 2, 3, 4, 5 ] ], [ [ 1, 2, 3, 4, 5 ] ] ] 9
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ] ], [ [ 1 ], [ 2, 3, 4, 5 ] ], [ [ 1, 2, 3, 4, 5 ] ]  10
+gap> for k in [11..15] do L:=FoldedJohnsonSchemeIA(k); b:=IAtoTA(L); FusionsOfTA(b); Print (k,"\n", FusionsOfTA(b));od;
+  
+[ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ]   [ [ 1 ], [ 2, 3, 4, 5, 6 ] ]   [ [ 1, 2, 3, 4, 5, 6 ] ]   11
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ], [ [ 1 ], [ 2, 3, 4, 5, 6 ] ], [ [ 1, 2, 3, 4, 5, 6 ] ]  12
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ] ], [ [ 1 ], [ 2, 3, 4, 5, 6, 7 ] ], [ [ 1, 2, 3, 4, 5, 6, 7 ] ] ]13
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ] ], [ [ 1 ], [ 2, 3, 4, 5, 6, 7 ] ], [ [ 1, 2, 3, 4, 5, 6, 7 ] ]  14
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ] ], [ [ 1 ], [ 2, 3, 4, 5, 6, 7, 8 ] ], 
+  [ [ 1, 2, 3, 4, 5, 6, 7, 8 ] ]  15
+
+gap> for k in [16..18] do L:=FoldedJohnsonSchemeIA(k); b:=IAtoTA(L); FusionsOfTA(b); Print (k,"\n", FusionsOfTA(b));od;
+[ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ], [ 9 ] ]   [ [ 1 ], [ 2, 3, 4, 5, 6, 7, 8, 9 ] ]   
+[ [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] ]  16
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ], [ 9 ] ], [ [ 1 ], [ 2, 3, 4, 5, 6, 7, 8, 9 ] ], 
+  [ [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] ]    17
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ], [ 9 ] ], [ [ 1 ], [ 2, 3, 4, 5, 6, 7, 8, 9 ] ], 
+  [ [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] ] ] 18
+
+
+
+
+################Maximal Subgroups Fusion in Sn##############333
+gap>H:=PrimitiveGroup(6,1);
+PSL(2,5)
+gap> G:=SymmetricGroup(6);;
+gap> b:=LeftRegularMatricesOfSchurianScheme(G,H);;
+gap> FusionsOfTA(b);
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], [ [ 1 ], [ 2, 3 ], [ 4 ] ], [ [ 1 ], [ 2, 3, 4 ] ], [ [ 1 ], [ 2, 4 ], [ 3 ] ] ]
+gap> M:=ConjugacyClassesMaximalSubgroups(G);;
+gap> for i in [1..Length(M)] do if H in M[i] then Print(i, "\n"); fi; od;
+gap> G:=SymmetricGroup(7);
+Sym( [ 1 .. 7 ] )
+gap> H:=PrimitiveGroup(7,4);
+AGL(1, 7)- Not maximal;
+gap> M:=ConjugacyClassesMaximalSubgroups(G);;
+gap> for i in [1..Length(M)] do if H in M[i] then Print(i, "\n"); fi; od;
+5
+gap> H:=PSL(3,2);
+Group([ (4,6)(5,7), (1,2,4)(3,6,5) ])
+gap> for i in [1..Length(M)] do if H in M[i] then Print(i, "\n"); fi; od;
+gap> b:=LeftRegularMatricesOfSchurianScheme(G,H);;
+gap> FusionsOfTA(b);
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], [ [ 1 ], [ 2, 3, 4 ] ], [ [ 1 ], [ 2, 4 ], [ 3 ] ] ]
+gap> G:=SymmetricGroup(8);
+Sym( [ 1 .. 8 ] )
+
+gap> H:=PrimitiveGroup(8,2);
+AGammaL(1, 8)
+gap> G:=SymmetricGroup(8);
+Sym( [ 1 .. 8 ] )
+gap> M:=ConjugacyClassesMaximalSubgroups(G);;
+gap> for i in [1..Length(M)] do if H in M[i] then Print(i, "\n"); fi; od;
+gap> b:=LeftRegularMatricesOfSchurianScheme(G,H);;
+gap> FusionsOfTA(b);
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ] ], [ [ 1 ], [ 2 ], [ 3, 6 ], [ 4 ], [ 5 ], [ 7, 8 ] ],
+  [ [ 1 ], [ 2, 3, 4, 5, 6, 7, 8 ] ], [ [ 1 ], [ 2, 3, 5, 6, 7, 8 ], [ 4 ] ],
+  [ [ 1 ], [ 2, 5 ], [ 3 ], [ 4 ], [ 6 ], [ 7, 8 ] ], [ [ 1 ], [ 2, 5 ], [ 3, 6 ], [ 4 ], [ 7, 8 ] ],
+  [ [ 1 ], [ 2, 5, 7, 8 ], [ 3 ], [ 4 ], [ 6 ] ], [ [ 1 ], [ 2, 5, 7, 8 ], [ 3 ], [ 4, 6 ] ],
+  [ [ 1 ], [ 2, 5, 7, 8 ], [ 3, 4, 6 ] ], [ [ 1 ], [ 2, 5, 7, 8 ], [ 3, 6 ], [ 4 ] ],
+  [ [ 1 ], [ 2, 8 ], [ 3 ], [ 4, 6 ], [ 5, 7 ] ] ]
+gap> H:=PrimitiveGroup(11,6);
+
+gap> H:=PrimitiveGroup(8,5);
+PGL(2, 7)- NOT MAXIMAL
+gap> M:=ConjugacyClassesMaximalSubgroups(G);;
+gap> for i in [1..Length(M)] do if H in M[i] then Print(i, "\n"); fi; od;
+7
+gap> H:=PrimitiveGroup(8,3);
+ASL(3, 2)
+gap> for i in [1..Length(M)] do if H in M[i] then Print(i, "\n"); fi; od;
+gap> b:=LeftRegularMatricesOfSchurianScheme(G,H);;
+gap>
+gap> FusionsOfTA(b);
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ], [ [ 1 ], [ 2, 3, 4 ] ], [ [ 1 ], [ 2, 4 ], [ 3 ] ] ]
+gap> G:=SymmetricGroup(9);
+Sym( [ 1 .. 9 ] )
+
+gap> H:=PrimitiveGroup(9,9);
+PGammaL(2, 8)
+gap> M:=ConjugacyClassesMaximalSubgroups(G);;
+gap> for i in [1..Length(M)] do if H in M[i] then Print(i, "\n"); fi; od;
+gap> b:=LeftRegularMatricesOfSchurianScheme(G,H);;
+gap> FusionsOfTA(b);
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ] ], [ [ 1 ], [ 2, 3, 4, 5 ] ], [ [ 1 ], [ 2, 5 ], [ 3 ], [ 4 ] ],
+  [ [ 1 ], [ 2, 5 ], [ 3, 4 ] ] ]
+gap> G:=SymmetricGroup(11);
+Sym( [ 1 .. 11 ] )
+gap> H:=PrimitiveGroup(11,6);
+M(11)
+gap> M:=ConjugacyClassesMaximalSubgroups(G);;
+gap> for i in [1..Length(M)] do if H in M[i] then Print(i, "\n"); fi; od;
+gap> b:=LeftRegularMatricesOfSchurianScheme(G,H);;
+gap> FusionsOfTA(b);
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ], [ 9 ], [ 10 ] ],
+  [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6, 7, 8, 9, 10 ] ], [ [ 1 ], [ 2, 3, 4, 5 ], [ 6, 7, 8, 9, 10 ] ],
+  [ [ 1 ], [ 2, 3, 4, 5, 6, 7, 8, 9, 10 ] ], [ [ 1 ], [ 2, 5 ], [ 3 ], [ 4 ], [ 6, 7, 8, 9, 10 ] ],
+  [ [ 1 ], [ 2, 5 ], [ 3 ], [ 4 ], [ 6, 10 ], [ 7 ], [ 8 ], [ 9 ] ] ]
+
+gap> G:=SymmetricGroup(12);
+Sym( [ 1 .. 12 ] )
+gap> H:=PrimitiveGroup(12,2);
+M(12)
+gap> M:=ConjugacyClassesMaximalSubgroups(G);;
+gap> for i in [1..Length(M)] do if H in M[i] then Print(i, "\n"); fi; od;
+gap> b:=LeftRegularMatricesOfSchurianScheme(G,H);;
+gap> FusionsOfTA(b);
+[ [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ], [ 7 ], [ 8 ] ], [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5, 6, 7, 8 ] ],
+  [ [ 1 ], [ 2, 3, 4 ], [ 5, 6, 7, 8 ] ], [ [ 1 ], [ 2, 3, 4, 5, 6, 7, 8 ] ] ]
+
